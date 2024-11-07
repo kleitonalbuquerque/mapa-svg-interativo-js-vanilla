@@ -1,0 +1,36 @@
+/* Garante que o body e o html ocupem 100% da altura */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden; /* Remove a rolagem vertical */
+}
+
+/* Flexbox para dividir o mapa e as informações */
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: auto;
+  max-width: 1200px;
+  padding: 20px;
+  height: 100vh; /* Ajusta para ocupar 100% da altura da janela */
+  box-sizing: border-box; /* Inclui padding na altura */
+}
+
+#mapa {
+  width: 65%;
+  max-height: 100%; /* Limita a altura do mapa */
+  overflow: hidden; /* Garante que o conteúdo do mapa não ultrapasse a área */
+}
+
+#info {
+  width: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  max-height: 100%; /* Limita a altura da info */
+  overflow: hidden; /* Remove qualquer conteúdo que exceda a altura */
+}
